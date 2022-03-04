@@ -38,6 +38,8 @@ public class RedisConfig {
 
             config.setHostName(redisHost);
             config.setPort(redisPort.get());
+            //This is needed for deploying to heroku
+            //config.setPassword(redisPassword);
 
             final JedisClientConfiguration jedisClient = 
                 JedisClientConfiguration.builder().build();
